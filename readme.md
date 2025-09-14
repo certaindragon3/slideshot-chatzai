@@ -1,10 +1,12 @@
 # SlideShot · HTML 幻灯片一键截图为 PNG/PDF
 
+[English](./README.en.md) · 简体中文
+
 [![Node](https://img.shields.io/badge/node-%3E=18.0-brightgreen)](https://nodejs.org)
 [![Puppeteer](https://img.shields.io/badge/puppeteer-24.x-40B5A4)](https://pptr.dev/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
-将 HTML 幻灯片精准裁切为无白边的高分辨率图片（PNG/JPEG），并可合并为 PDF。该工具专为 chat.z.ai 页面里的 AI PPT 功能使用场景而开发与优化：自动等待图片与 Web 字体加载、支持 2x 清晰度、可设置 Referer 与 cookies、优先裁切 `.slide` 元素，适配其生成的网页幻灯片结构。
+将智谱AI生成的HTML 幻灯片精准裁切为无白边的高分辨率图片（PNG/JPEG），并可合并为 PDF。该工具专为 chat.z.ai 页面里的 AI PPT 功能使用场景而开发与优化：自动等待图片与 Web 字体加载、支持 2x 清晰度、可设置 Referer 与 cookies、优先裁切 `.slide` 元素，适配其生成的网页幻灯片结构。
 
 > 适用场景：使用 chat.z.ai 的 AI PPT 生成的每页 HTML 幻灯片（如 1.html ~ N.html），需要批量导出为图片/PDF 进行分享、打印或归档。
 > 
@@ -52,7 +54,7 @@ npm install
 python3 -m http.server 8000
 ```
 
-3) 执行截图（CLI，自动扫描当前目录的 `*.html`，推荐 2 倍清晰度）：
+3) 执行截图（CLI，自动扫描当前目录的 `*.html`，推荐 2 倍清晰度：2560x1440）：
 
 ```bash
 npm run slideshot -- -s 2
