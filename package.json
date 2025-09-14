@@ -32,12 +32,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/<your-username>/slideshot.git"
+    "url": "git+https://github.com/certaindragon3/slideshot-chatzai.git"
   },
   "bugs": {
-    "url": "https://github.com/<your-username>/slideshot/issues"
+    "url": "https://github.com/certaindragon3/slideshot-chatzai/issues"
   },
-  "homepage": "https://github.com/<your-username>/slideshot#readme",
+  "homepage": "https://github.com/certaindragon3/slideshot-chatzai#readme",
   "dependencies": {
     "puppeteer": "^24.20.0"
   }
