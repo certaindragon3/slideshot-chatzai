@@ -1,15 +1,6 @@
-// shot.js — Puppeteer 按 .slide 元素矩形裁切截图（无白边、不变形）
+// shot.js — 核心逻辑：按 .slide 元素矩形裁切截图（无白边、不变形）
 //
-// 用法（方式一，兼容老用法）：
-//   python3 -m http.server 8000
-//   SCALE=2 node shot.js
-//
-// 用法（方式二，推荐 CLI）：
-//   node bin/slideshot.js --scale 2 --pattern "*.html"
-//
-// 环境变量（方式一）：
-//   BASE, SCALE, REFERER, OUT_EXT, QUALITY
-//
+// 用途：作为库被 CLI 调用（bin/slideshot.js）。不直接通过 node 运行。
 // 备注：如需登录态，在同目录放 cookies.json（数组），脚本会自动注入。
 
 const fs = require('fs');
@@ -25,13 +16,13 @@ function getPuppeteer() {
   return _puppeteer;
 }
 
-// 默认配置（可被参数/环境变量覆盖）
+// 默认配置（仅代码内默认值，可被 CLI 传参覆盖）
 const DEFAULTS = {
-  base: process.env.BASE || 'http://localhost:8000/',
-  scale: parseFloat(process.env.SCALE || '1'), // 1 或 2（推荐 2 更清晰）
-  referer: process.env.REFERER || '',
-  outExt: (process.env.OUT_EXT || 'png').toLowerCase(), // png | jpg | jpeg
-  quality: parseInt(process.env.QUALITY || '90', 10),
+  base: 'http://localhost:8000/',
+  scale: 1,
+  referer: '',
+  outExt: 'png', // png | jpg | jpeg
+  quality: 90,
   pattern: '*.html',
   selector: '.slide',
   dryRun: false,
@@ -226,11 +217,3 @@ async function runSlideshot(options = {}) {
 }
 
 module.exports = { runSlideshot, discoverHtmlFiles };
-
-// 直接运行（兼容旧环境变量方式）
-if (require.main === module) {
-  runSlideshot().catch(err => {
-    console.error('❌ 出错：', err);
-    process.exit(1);
-  });
-}

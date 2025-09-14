@@ -2,7 +2,7 @@
 /* eslint-disable no-console */
 // CLI 入口：解析命令行参数并调用 runSlideshot
 
-const { runSlideshot } = require('..//shot');
+const { runSlideshot } = require('../shot.js');
 
 function parseArgs(argv) {
   const args = argv.slice(2);

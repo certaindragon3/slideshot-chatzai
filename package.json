@@ -8,11 +8,10 @@
     "slideshot": "bin/slideshot.js"
   },
   "scripts": {
-    "shot": "node shot.js",
-    "shot:2x": "SCALE=2 node shot.js",
-    "shot:jpg": "OUT_EXT=jpg QUALITY=85 SCALE=2 node shot.js",
-    "cli": "node bin/slideshot.js --dry-run",
-    "test": "echo 'No tests yet' && exit 0"
+    "slideshot": "node bin/slideshot.js",
+    "slideshot:2x": "node bin/slideshot.js -s 2",
+    "slideshot:jpg": "node bin/slideshot.js -s 2 --out-ext jpg -q 85",
+    "test": "node bin/slideshot.js --dry-run"
   },
   "keywords": [
     "puppeteer",
