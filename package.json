@@ -1,0 +1,45 @@
+{
+  "name": "slideshot",
+  "version": "1.0.0",
+  "description": "将 AI/HTML 幻灯片精准裁切为无白边的 PNG/JPEG，并可合并为 PDF 的小工具（Puppeteer）。",
+  "main": "shot.js",
+  "type": "commonjs",
+  "bin": {
+    "slideshot": "bin/slideshot.js"
+  },
+  "scripts": {
+    "shot": "node shot.js",
+    "shot:2x": "SCALE=2 node shot.js",
+    "shot:jpg": "OUT_EXT=jpg QUALITY=85 SCALE=2 node shot.js",
+    "cli": "node bin/slideshot.js --dry-run",
+    "test": "echo 'No tests yet' && exit 0"
+  },
+  "keywords": [
+    "puppeteer",
+    "slide",
+    "screenshot",
+    "png",
+    "jpeg",
+    "pdf",
+    "html",
+    "glm",
+    "ai",
+    "slides"
+  ],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<your-username>/slideshot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/<your-username>/slideshot/issues"
+  },
+  "homepage": "https://github.com/<your-username>/slideshot#readme",
+  "dependencies": {
+    "puppeteer": "^24.20.0"
+  }
+}

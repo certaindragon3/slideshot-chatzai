@@ -1,0 +1,29 @@
+# Node
+node_modules/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# OS
+.DS_Store
+
+# Puppeteer cache/profile
+profile/
+
+# Output images & PDFs (optional, keep repo small)
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.html
+slides_combined.pdf
+
+# Keep sample preview image(s)
+!1.png
+
+# Env & temp
+.env
+.tmp/
+.cache/
