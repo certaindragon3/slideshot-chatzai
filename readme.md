@@ -4,9 +4,11 @@
 [![Puppeteer](https://img.shields.io/badge/puppeteer-24.x-40B5A4)](https://pptr.dev/)
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](./LICENSE)
 
-将 HTML 幻灯片精准裁切为无白边的高分辨率图片（PNG/JPEG），并可合并为 PDF。默认自动等待图片与 Web 字体加载、支持 2x 清晰度、可设置 Referer 与 cookies，适配 AI 生成的网页幻灯片（如智谱 AI GLM 系列）。
+将 HTML 幻灯片精准裁切为无白边的高分辨率图片（PNG/JPEG），并可合并为 PDF。该工具专为 chat.z.ai 页面里的 AI PPT 功能使用场景而开发与优化：自动等待图片与 Web 字体加载、支持 2x 清晰度、可设置 Referer 与 cookies、优先裁切 `.slide` 元素，适配其生成的网页幻灯片结构。
 
-> 适用场景：用 AI 生成的每页 HTML 幻灯片文件（如 1.html ~ N.html），需要批量导出为图片/PDF 进行分享、打印或归档。
+> 适用场景：使用 chat.z.ai 的 AI PPT 生成的每页 HTML 幻灯片（如 1.html ~ N.html），需要批量导出为图片/PDF 进行分享、打印或归档。
+> 
+> 免责声明：本项目为社区工具，与智谱/Chat Z（chat.z.ai）无官方关系或背书。
 
 ---
 
