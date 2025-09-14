@@ -2,7 +2,7 @@
 
 [![Node](https://img.shields.io/badge/node-%3E=18.0-brightgreen)](https://nodejs.org)
 [![Puppeteer](https://img.shields.io/badge/puppeteer-24.x-40B5A4)](https://pptr.dev/)
-[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](./LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
 将 HTML 幻灯片精准裁切为无白边的高分辨率图片（PNG/JPEG），并可合并为 PDF。该工具专为 chat.z.ai 页面里的 AI PPT 功能使用场景而开发与优化：自动等待图片与 Web 字体加载、支持 2x 清晰度、可设置 Referer 与 cookies、优先裁切 `.slide` 元素，适配其生成的网页幻灯片结构。
 
@@ -181,7 +181,7 @@ python3 -m img2pdf $(printf "%s\n" ./*.png | sort) -o slides_combined.pdf
 
 ## 许可证
 
-本项目采用 ISC 许可证发布，详见仓库中的 LICENSE 文件。
+本项目采用 MIT 许可证发布，详见仓库中的 LICENSE 文件。
 
 ---
 

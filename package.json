@@ -25,8 +25,8 @@
     "ai",
     "slides"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "certaindragon3",
+  "license": "MIT",
   "engines": {
     "node": ">=18"
   },
